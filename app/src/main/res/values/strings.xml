@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FA-2017-H2</string>
+    <string name="message_key">MESSAGE</string>
 </resources>
