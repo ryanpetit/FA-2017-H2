@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ReceiverActivity extends AppCompatActivity {
+    static String message;
+
     private TextView messageText;
 
     @Override
@@ -14,11 +16,11 @@ public class ReceiverActivity extends AppCompatActivity {
 
         messageText = (TextView)findViewById(R.id.message_text);
 
-        String retrievedMessgae = null;
+//        String retrievedMessgae = null;
 
         if (getIntent().hasExtra("MESSAGE")) {
-            retrievedMessgae = getIntent().getStringExtra("MESSAGE");
-            messageText.setText(retrievedMessgae);
+            message = getIntent().getStringExtra("MESSAGE");
+            messageText.setText(message);
         }
     }
 }

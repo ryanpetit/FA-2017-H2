@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class SenderActivity extends AppCompatActivity {
     private Button sendButton;
     private EditText senderTextEntry;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +30,11 @@ public class SenderActivity extends AppCompatActivity {
     }
 
     private void processTextForNavigation() {
-        if (senderTextEntry != null) {
-            String message = senderTextEntry.getText().toString();
-            if (message.length() != 0) {
-                Intent messageIntent = new Intent(this, ReceiverActivity.class);
-                messageIntent.putExtra("MESSAGE", message);
-                startActivity(messageIntent);
-            }
+        if (senderTextEntry != null && senderTextEntry.getText().toString().length() != 0) {
+            ReceiverActivity.message = senderTextEntry.getText().toString();
+            Intent messageIntent = new Intent(this, ReceiverActivity.class);
+            messageIntent.putExtra("MESSAGE", ReceiverActivity.message);
+            startActivity(messageIntent);
         }
     }
 }
