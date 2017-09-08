@@ -23,6 +23,7 @@
             android:text="Enter your message here: :"
             android:layout_weight="1"/>
         <EditText
+            android:id="@+id/sender_text_entry"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"/>
