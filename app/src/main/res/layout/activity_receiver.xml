@@ -7,9 +7,6 @@
     tools:context="com.fa17.ssu385.fa_2017_h2.ReceiverActivity">
 
 
-
-
-
     <TextView
         android:id="@+id/message_text"
         android:layout_width="wrap_content"
